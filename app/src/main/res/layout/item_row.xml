@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_2x"
+    android:layout_marginTop="@dimen/dimen_1x"
+    android:layout_marginEnd="@dimen/dimen_2x"
+    android:layout_marginBottom="@dimen/dimen_1x"
+    app:cardCornerRadius="@dimen/dimen_2x"
+    android:elevation="@dimen/dimen_1x"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/repoName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/dimen_4x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:textSize="@dimen/header_large_text"
+            android:text="@string/title_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/repoDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repoName"
+            android:layout_marginStart="@dimen/dimen_4x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:textSize="@dimen/header_small_text"
+            android:text="@string/description_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/repoOwnerAvatar"
+            app:layout_constraintTop_toBottomOf="@id/repoDescription"
+            app:layout_constraintStart_toStartOf="@id/repoName"
+            android:layout_marginTop="@dimen/dimen_6x"
+            android:src="@drawable/avatar_placeholder"
+            android:layout_width="@dimen/dimen_6x"
+            android:maxHeight="@dimen/dimen_6x"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/avatar_image" />
+
+        <TextView
+            android:id="@+id/repoOwner"
+            app:layout_constraintStart_toEndOf="@id/repoOwnerAvatar"
+            app:layout_constraintBottom_toBottomOf="@id/repoOwnerAvatar"
+            android:text="@string/repo_owner_placeholder"
+            android:layout_marginStart="@dimen/dimen_3x"
+            android:textSize="@dimen/body_large_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/reposStars"
+            app:layout_constraintTop_toBottomOf="@id/repoOwnerAvatar"
+            app:layout_constraintStart_toStartOf="@id/repoName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/dimen_3x"
+            android:layout_marginBottom="@dimen/dimen_3x"
+            android:src="@drawable/star_icon"
+            android:layout_width="@dimen/dimen_6x"
+            android:maxHeight="@dimen/dimen_6x"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/star_image" />
+
+        <TextView
+            android:id="@+id/repoStarsCount"
+            app:layout_constraintStart_toEndOf="@id/reposStars"
+            app:layout_constraintBottom_toBottomOf="@id/reposStars"
+            android:text="@string/repo_stars_placeholder"
+            android:layout_marginStart="@dimen/dimen_3x"
+            android:textSize="@dimen/body_large_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

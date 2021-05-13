@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_2x"
+    android:layout_marginTop="@dimen/dimen_1x"
+    android:layout_marginEnd="@dimen/dimen_2x"
+    android:layout_marginBottom="@dimen/dimen_1x"
+    app:cardCornerRadius="@dimen/dimen_2x"
+    android:elevation="@dimen/dimen_1x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/repoNamePlaceholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/dimen_4x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:background="@color/transparent_black"
+            android:layout_width="96dp"
+            android:layout_height="32dp"/>
+
+        <TextView
+            android:id="@+id/repoDescriptionPlaceholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repoNamePlaceholder"
+            android:layout_marginStart="@dimen/dimen_4x"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:background="@color/transparent_black"
+            android:layout_width="160dp"
+            android:layout_height="24dp"/>
+
+        <ImageView
+            android:id="@+id/repoOwnerAvatarPlaceholder"
+            app:layout_constraintTop_toBottomOf="@id/repoDescriptionPlaceholder"
+            app:layout_constraintStart_toStartOf="@id/repoNamePlaceholder"
+            android:layout_marginTop="@dimen/dimen_6x"
+            android:src="@drawable/avatar_placeholder"
+            android:layout_width="@dimen/dimen_6x"
+            android:maxHeight="@dimen/dimen_6x"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/avatar_image" />
+
+        <View
+            android:id="@+id/repoOwnerPlaceholder"
+            app:layout_constraintStart_toEndOf="@id/repoOwnerAvatarPlaceholder"
+            app:layout_constraintBottom_toBottomOf="@id/repoOwnerAvatarPlaceholder"
+            android:layout_marginStart="@dimen/dimen_3x"
+            android:background="@color/transparent_black"
+            android:layout_width="64dp"
+            android:layout_height="16dp"/>
+
+        <ImageView
+            android:id="@+id/reposStarsPlaceholder"
+            app:layout_constraintTop_toBottomOf="@id/repoOwnerAvatarPlaceholder"
+            app:layout_constraintStart_toStartOf="@id/repoNamePlaceholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/dimen_3x"
+            android:layout_marginBottom="@dimen/dimen_3x"
+            android:src="@drawable/star_icon"
+            android:layout_width="@dimen/dimen_6x"
+            android:maxHeight="@dimen/dimen_6x"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/star_image" />
+
+        <View
+            android:id="@+id/repoStarsCountPlaceholder"
+            app:layout_constraintStart_toEndOf="@id/reposStarsPlaceholder"
+            app:layout_constraintBottom_toBottomOf="@id/reposStarsPlaceholder"
+            android:layout_marginStart="@dimen/dimen_3x"
+            android:background="@color/transparent_black"
+            android:layout_width="32dp"
+            android:layout_height="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

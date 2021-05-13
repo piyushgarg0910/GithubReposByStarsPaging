@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GithubReposByStarsPaging</string>
+    <string name="retry">Retry</string>
+    <string name="title_placeholder">Title</string>
+    <string name="description_placeholder">Description</string>
+    <string name="repo_owner_placeholder">Repo Owner</string>
+    <string name="repo_stars_placeholder">123456</string>
+    <string name="avatar_image">Owner Avatar Image</string>
+    <string name="star_image">Repo Stars Image</string>
+</resources>
